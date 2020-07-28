@@ -1,9 +1,9 @@
 {
-  "title": "Delog",
+  "title": "Common Feature",
   "siteUrl": "https://common-feature.netlify.app/",
-  "description": "Delog, a GatsbyJS and Netlify CMS starter for Designers and Developers",
+  "description": "CommonFeature is a place for you to publish your ideas and draft academic papers.",
   "home": {
-    "title": "Hi! I'm Delog",
-    "description": "I have been specifically designed to become a digital home for designers and developers, help them build amazing professional looking websites with ease. You don't have to worry about nitty gritty of web hosting services to run a blog and yet take full advantage of CMS to manage content :)"
+    "title": "CommonFeature",
+    "description": "In a modern age, information is available and accessible to anyone who wishes to access it - as such, CommonFeature is designed to encourage all individuals of all backgrounds or experience to engage in the discussion of new or existing ideas and disciplines."
   }
 }
