@@ -25,7 +25,7 @@ export default ({ children }) => {
       </header>
       {children}
       <footer className="site-footer">
-        <p>&copy; {new Date().getFullYear()} CommonFeature &bull; Crafted with Gatsby</p>
+        <p>&copy; {new Date().getFullYear()} CommonFeature &bull; Created by Ontrent Ltd</p>
       </footer>
     </div>
   )
