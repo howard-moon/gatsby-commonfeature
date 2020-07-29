@@ -2,7 +2,7 @@ import React from "react"
 import Helmet from 'react-helmet';
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import { DiscussionEmbed } from "disqus-react"
+import disqus from "disqus-react"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -10,9 +10,10 @@ export default function Template({
   const { site, markdownRemark } = data // data.markdownRemark holds your post data
   const { siteMetadata } = site
   const { frontmatter, html } = markdownRemark
+  const disqusShortname = "commonfeature"
 
   const disqusConfig = {
-    shortname: process.env.commonfeature,
+    shortname: '//commonfeature.disqus.com/embed.js',
     config: { identifier: frontmatter.title },
   }
 
@@ -41,14 +42,25 @@ export default function Template({
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}
-          />
-          <DiscussionEmbed {...disqusConfig} />
+          />               
         </article>
       </div>
-      
+      <disqus.DiscussionEmbed shortname={disqusShortname} {...disqusConfig} />
     </Layout>
   )
 }
+// import React, { Component} from 'react';
+// import { FacebookProvider, Comments } from 'react-facebook';
+ 
+// export default class Example extends Component {
+//   render() {
+//     return (
+//       <FacebookProvider appId="123456789">
+//         <Comments href="http://www.facebook.com" />
+//       </FacebookProvider>
+//     );
+//   }
+// }
 
 export const pageQuery = graphql`
   query($path: String!) {
