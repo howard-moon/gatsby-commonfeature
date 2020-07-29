@@ -12,7 +12,7 @@ export default function Template({
   const { frontmatter, html } = markdownRemark
 
   const disqusConfig = {
-    shortname: process.env.Commonfeature,
+    shortname: process.env.commonfeature,
     config: { identifier: frontmatter.title },
   }
 
